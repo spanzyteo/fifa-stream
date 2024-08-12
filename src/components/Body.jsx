@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import playStore from '../assets/google-play.png'
+import playStore from '../assets/google-play.jpeg'
 import { Link } from 'react-router-dom'
 import { FaCopy } from 'react-icons/fa'
+import { FaRegCopy } from 'react-icons/fa'
+import skateMan from '../assets/skate-man.png'
 
 const Body = () => {
   const walletAddress = '8EGkaTTM2fdKFrZhk8gWiVWShWTRmBXqcoHxJphJ3qTV'
@@ -32,31 +34,41 @@ const Body = () => {
     }
   }
   return (
-    <div className="mt-20 flex flex-col ml-10 md:ml-20 w-[300px] md:w-[450px]">
-      <div className="text-3xl font-bold flex">
-        <h1 className="w-[250px] md:w-[400px] break-all">{walletAddress}</h1>
-        <div className='flex flex-col'>
-          <FaCopy
-            className="ml-2 cursor-pointer text-gray-500 hover:text-gray-700 h-[20px] w-[20px]"
-            onClick={copyToClipboard}
-            title="Copy Wallet Address"
-          />
-          {isCopied && <span className="ml-2 text-sm text-black">Copied!</span>}
-        </div>
+    <div className="mt-20 flex flex-col md:ml-20 w-[300px] md:w-[450px] mx-auto">
+      <div className="text-white mx-auto md:mx-0 text-2xl font-semibold">
+        <h1 className="flex text-center text-red-700">Watch Live Event From your Phone</h1>
       </div>
-      <div className="mt-10 font-semibold ">
+      <div className="mt-10 text-white text-center md:text-left">
         The Livestream app grants you mobile access to go live to your events,
         find us on solana now
+      </div>
+      <div className="flex flex-col text-white mt-8">
+        <h1 className="text-center text-3xl font-bold">Contact</h1>
+        <div className="flex items-center item border border-gray-500 mt-5 px-5 pb-3 rounded-lg mx-auto">
+          <h1 className="mt-5 break-all text-xs sm:text-lg text-center">
+            {walletAddress}
+          </h1>
+          <div className="">
+            <FaRegCopy
+              className="ml-2 cursor-pointer hover:text-gray-700 h-[20px] w-[20px] text-white mt-4"
+              onClick={copyToClipboard}
+              title="Copy Wallet Address"
+            />
+            {/* {isCopied && <span className="ml-2 text-sm text-black">Copied!</span>} */}
+          </div>
+        </div>
       </div>
       <Link
         to={
           'https://play.google.com/store/apps/details?id=com.livestream.livestream'
         }
+        target='_blank'
         className="mt-10 mb-2"
       >
         <img src={playStore} alt="" className="h-[60px]" />
       </Link>
-      <div className="md:mt-[7.5rem] mt-[14rem]"></div>
+      <div className='h-[400px]'>
+      <img src={skateMan} alt="" className='h-full w-full' /></div>
     </div>
   )
 }
