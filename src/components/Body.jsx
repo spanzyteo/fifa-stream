@@ -45,7 +45,7 @@ const Body = () => {
         find us on Solana now.
       </div>
       <div className="flex flex-col text-white mt-8">
-        <h1 className="text-center text-3xl font-bold uppercase">Contact</h1>
+        <h1 className="text-center text-3xl font-bold uppercase">Contract</h1>
         <div className="flex items-center item border border-gray-500 mt-5 px-5 pb-3 rounded-lg mx-auto">
           <h1 className="mt-5 break-all text-xs sm:text-lg text-center">
             {walletAddress}
