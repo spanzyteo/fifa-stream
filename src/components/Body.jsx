@@ -3,7 +3,7 @@ import playStore from '../assets/google-play.jpeg'
 import { Link } from 'react-router-dom'
 import { FaCopy } from 'react-icons/fa'
 import { FaRegCopy } from 'react-icons/fa'
-import skateMan from '../assets/skate-man.png'
+import skateMan from '../assets/skate.png'
 
 const Body = () => {
   const walletAddress = '8EGkaTTM2fdKFrZhk8gWiVWShWTRmBXqcoHxJphJ3qTV'
@@ -34,16 +34,18 @@ const Body = () => {
     }
   }
   return (
-    <div className="mt-20 flex flex-col md:ml-20 w-[300px] md:w-[450px] mx-auto">
-      <div className="text-white mx-auto md:mx-0 text-2xl font-semibold">
-        <h1 className="flex text-center text-red-700">Watch Live Event From your Phone</h1>
+    <div className="mt-20 flex flex-col w-[300px] md:w-[550px] mx-auto">
+      <div className="text-white mx-auto text-2xl font-semibold">
+        <h1 className="flex text-center text-red-700 md:text-3xl uppercase">
+          Watch Live Events From Your Phone
+        </h1>
       </div>
-      <div className="mt-10 text-white text-center md:text-left">
+      <div className="mt-10 text-white text-center uppercase">
         The Livestream app grants you mobile access to go live to your events,
-        find us on solana now
+        find us on Solana now.
       </div>
       <div className="flex flex-col text-white mt-8">
-        <h1 className="text-center text-3xl font-bold">Contact</h1>
+        <h1 className="text-center text-3xl font-bold uppercase">Contact</h1>
         <div className="flex items-center item border border-gray-500 mt-5 px-5 pb-3 rounded-lg mx-auto">
           <h1 className="mt-5 break-all text-xs sm:text-lg text-center">
             {walletAddress}
@@ -62,13 +64,14 @@ const Body = () => {
         to={
           'https://play.google.com/store/apps/details?id=com.livestream.livestream'
         }
-        target='_blank'
-        className="mt-10 mb-2"
+        target="_blank"
+        className="mt-10 mx-auto"
       >
         <img src={playStore} alt="" className="h-[60px]" />
       </Link>
-      <div className='h-[400px]'>
-      <img src={skateMan} alt="" className='h-full w-full' /></div>
+      <div className="h-[400px] md:h-[600px]">
+        <img src={skateMan} alt="" className="h-full w-full" />
+      </div>
     </div>
   )
 }
